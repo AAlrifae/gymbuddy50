@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :exercises
   resources :recipes
   resources :days
   devise_for :users
