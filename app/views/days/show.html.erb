@@ -1,3 +1,37 @@
 <p id="notice"><%= notice %></p>
 
 <%= link_to 'Back', days_path %>
+
+<div class="container">
+<div class="card-deck">
+<% @day.recipes.each do |r| %>
+  <div class="card">
+     <%=  image_tag r.image, size:'200x200', class: "card-img-top "  %>
+    <div class="card-body">
+      <h1 class="card-title"><%= r.name %></h1>
+      <p class="card-text"><%= r.ingredients %></p>
+    </div>
+    </div>
+   <% end %>
+  </div>
+  </div>
+
+
+
+
+<div class="container">
+<div class="card-deck">
+<% @day.exercises.each do |e| %>
+  <div class="card">
+     <%=  image_tag e.image, size:'200x200', class: "card-img-top "  %>
+    <div class="card-body">
+      <h1 class="card-title"><%= e.name %></h1>
+      <p class="card-text"><%= e.description %></p>
+    </div>
+    </div>
+   <% end %>
+  </div>
+  </div>
+
+
+
