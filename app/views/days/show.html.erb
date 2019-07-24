@@ -56,6 +56,18 @@ hello<!--
   </a>
 </div>
 -->
+
+<h1>Editing Exercise</h1>
+<% userIsAdmin = current_user ? current_user.admin : false %>
+<% if userIsAdmin %>
+<% @exercises.each do |exercise| %>
+<%= render 'exercises/form', exercise: exercise %>
+<%= link_to 'Show', @exercise %> |
+<%= link_to 'Back', exercises_path %>
+
+<% end %>
+
+<% end %>
 <div class="container">
 <div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">

@@ -30,7 +30,7 @@ class RecipesController < ApplicationController
       private
     
       def recipe_params
-        params.require(:recipe).premit(:name, :ingredients, :image, :category )
+        params.require(:recipe).permit(:name, :ingredients, :image, :category )
       end
       def is_admin
         if current_user.admin

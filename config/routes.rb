@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'home/new'
   get 'home/show'
   get 'home/edit'
+  get 'days/edit_admin'
+  # get 'days/edit_admin/:id/edit_exer_recipe', as: "edit_admin_rec_exr"
   devise_for :users
   resources :days
   resources :exercises

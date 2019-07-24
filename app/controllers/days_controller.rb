@@ -6,6 +6,8 @@ class DaysController < ApplicationController
 
   def show
     @day = Day.find(params[:id])
+    @exercises = Day.find(params[:id]).exercises
+    @recipes = Day.find(params[:id]).recipes
     # This code below has a quick demo of how to form a json object with nested ingredients on a day.
     # render json: @day, include: :ingredients
   end
@@ -16,7 +18,7 @@ class DaysController < ApplicationController
 
   def create
     puts params
-    @day = Day.create(recipe_params)
+    @day = Day.create(days_params)
     redirect_to @day
   end
 
@@ -29,6 +31,17 @@ class DaysController < ApplicationController
     @day = Day.find(params[:id])
   end
 
+  def edit_admin
+    @days = Day.all
+
+  end
+
+  def edit_exer_reicpe
+  
+  end
+
+
+  
   def update
    @day = Day.find(params[:id])
     @day.update(days_params)
@@ -38,7 +51,7 @@ class DaysController < ApplicationController
   private
 
   def days_params
-    params.require(:day).premit(:day)
+    params.require(:day).permit(:day)
   end
   
   def is_admin

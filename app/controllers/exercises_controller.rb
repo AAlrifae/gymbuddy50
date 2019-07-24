@@ -35,7 +35,7 @@ class ExercisesController < ApplicationController
       private
     
       def exercise_params
-        params.require(:exercise).premit(:name, :description, :image)
+        params.require(:exercise).permit(:name, :description, :image)
       end
 
       def is_admin
