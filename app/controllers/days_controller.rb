@@ -14,6 +14,12 @@ class DaysController < ApplicationController
     @day = Day.new(days_params)
   end
 
+  def create
+    puts params
+    @day = Day.create(recipe_params)
+    redirect_to @day
+  end
+
   def destroy
     Day.find(params[:id]).destroy
     redirect_to days_path
@@ -39,4 +45,5 @@ class DaysController < ApplicationController
     if current_user.admin
     end
 end
+
 end
