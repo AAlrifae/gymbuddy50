@@ -37,8 +37,10 @@ class ExercisesController < ApplicationController
       def exercise_params
         params.require(:exercise).premit(:name, :description, :image)
       end
+
       def is_admin
         if current_user.admin
         end
+    end
 
 end
