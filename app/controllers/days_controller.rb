@@ -1,4 +1,5 @@
 class DaysController < ApplicationController
+  before_action :is_admin, only: [:new,:destroy, :edit, :update ]
   def index
     @days = Day.all
   end
@@ -10,6 +11,32 @@ class DaysController < ApplicationController
   end
   
   def new
-    
+    @day = Day.new(days_params)
   end
+
+  def destroy
+    Day.find(params[:id]).destroy
+    redirect_to days_path
+  end
+
+  def edit
+    @day = Day.find(params[:id])
+  end
+
+  def update
+   @day = Day.find(params[:id])
+    @day.update(days_params)
+    redirect_to days_path
+  end
+
+  private
+
+  def days_params
+    params.require(:day).premit(:day)
+  end
+  
+  def is_admin
+    if current_user.admin
+    end
+end
 end

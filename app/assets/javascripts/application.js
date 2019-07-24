@@ -18,3 +18,11 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+function hide(){
+
+    setTimeout(function(){
+        document.querySelector('#ramoon').style.display = "none";
+    },2000);
+}
+hide();
