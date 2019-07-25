@@ -3,8 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .home-image {
     background-image: url("https://images.wallpaperscraft.com/image/lemon_glass_water_spray_106738_3840x2160.jpg");
-    background-size:cover;
-    background-repeat:no-repeat;
+
+
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: top;
+background-size: cover;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+height: 100%;
+width: 100%;
+background-position: center center;
+background-repeat: no-repeat;
+
 
 }
 .home-top{
