@@ -2,10 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .home-image {
-    width: 100%;
-    height: 400px;
     background-image: url("https://images.wallpaperscraft.com/image/lemon_glass_water_spray_106738_3840x2160.jpg");
-    background-size: cover;
+    background-size:cover;
+    background-repeat:no-repeat;
+
 }
 .home-top{
     margin-top: 300px;
