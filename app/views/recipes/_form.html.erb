@@ -10,7 +10,17 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="form-group">
+  <%= form.label :name %>
+  <%= form.text_field :name, class: "form-control" %>
+  <%= form.label :ingredients %>
+  <%= form.text_field :ingredients, class: "form-control" %>
+  <%= form.label :category %>
+  <%= form.text_field :category, class: "form-control" %>
+  <%= form.label :image %>
+  <%= form.text_field :image, class: "form-control" %>
+  </div>
+  
   <div class="actions">
     <%= form.submit %>
   </div>

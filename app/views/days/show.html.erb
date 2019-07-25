@@ -64,7 +64,12 @@ hello<!--
 <%= render 'exercises/form', exercise: exercise %>
 <%= link_to 'Show', @exercise %> |
 <%= link_to 'Back', exercises_path %>
-
+<% end %>
+<h1>Editing Recipe</h1>
+<% @recipes.each do |recipe| %>
+<%= render 'recipes/form', recipe: recipe %>
+<%= link_to 'Show', @recipe %> |
+<%= link_to 'Back', recipes_path %>
 <% end %>
 
 <% end %>
