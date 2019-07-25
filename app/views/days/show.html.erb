@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Back', days_path %>
+<%= link_to 'Back', days_path, class: 'btn btn-primary' %>
 
 <!--
 
@@ -37,7 +37,7 @@
 
 
 
-hello<!--
+<!--
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner">
     <% @day.exercises.each_with_index do |image, index| %>
@@ -57,7 +57,6 @@ hello<!--
 </div>
 -->
 
-<h1>Editing Exercise</h1>
 <% userIsAdmin = current_user ? current_user.admin : false %>
 <% if userIsAdmin %>
 <% @exercises.each do |exercise| %>
@@ -73,13 +72,16 @@ hello<!--
 <% end %>
 
 <% end %>
-<div class="container">
+
+<div class="container ">
 <div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
     </ol>
     <div class="carousel-inner mb-5">
     <% @day.exercises.each_with_index do |image, index| %>
@@ -103,9 +105,10 @@ hello<!--
     </a>
   </div>
 </div>
-
+<br>
+<div class="container"></div>
 <div class="bd-example">
-  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <div id="carouselExampleCaptions1" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -123,14 +126,15 @@ hello<!--
   <% end %>    
   </div>
    
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#carouselExampleCaptions1" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#carouselExampleCaptions1" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+  </div>
   </div>
 </div>
 </div>
