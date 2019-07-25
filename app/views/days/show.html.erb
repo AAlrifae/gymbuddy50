@@ -1,3 +1,6 @@
+<body>
+  
+
 <p id="notice"><%= notice %></p>
 
 <%= link_to 'Back', days_path, class: 'btn btn-primary' %>
@@ -73,7 +76,8 @@
 
 <% end %>
 
-<div class="container ">
+<div class="container  ">
+<div class="ramo">
 <div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -88,8 +92,8 @@
     <div class="carousel-item  <%= index == 0 ? 'active' : '' %>">
       <%= image_tag image.image ,:class => "d-block w-100 m-auto"%>
         <div class="carousel-caption d-none d-md-block">
-            <h5><%= image.name%></h5>
-            <p><%= image.description%></p>
+            <h1><%= image.name%></h1>
+            <h5><%= image.description%></h5>
           </div>
     </div>
   <% end %>    
@@ -103,6 +107,7 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+  </div>
   </div>
 </div>
 <br>
@@ -119,8 +124,8 @@
     <div class="carousel-item  <%= index == 0 ? 'active' : '' %>">
       <%= image_tag image.image , :class => "d-block w-100 m-auto"%>
         <div class="carousel-caption d-none d-md-block">
-            <h5><%= image.name%></h5>
-            <p><%= image.ingredients%></p>
+            <h1><%= image.name%></h1>
+            <h5><%= image.ingredients%></h5>
           </div>
     </div>
   <% end %>    
